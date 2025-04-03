@@ -1,0 +1,78 @@
+interview Questions for laravel => 100 Days Achivements 
+
+DAY=>1 
+
+1.What is laravel ?
+
+Laravel is open-source php framework .it helps to developer build the website and mobile app.It is used to MVC Apporcach
+like Model View Controller .The latet version of laravel is (12).
+
+==========================================================================================================================
+
+2.What is service container ?
+
+In laravel service container is most power full tool. it  manageing the class dependenties injection and performance 
+
+dependenties injection. Almost all the service container bindings will be register within service provider. (using bind method)
+
+if you may be use bindif method to register a container binding only if a binding has not allready been registered.
+
+==========================================================================================================================
+
+3. Singleton
+
+The singleton method binds a class or interface into the container that should only be resolved one time. 
+
+=========================================================================================================================
+
+4.singletonIf 
+
+You may use the singletonIf method to register a singleton container binding only if a binding has not already been 
+registered for the given type:
+
+=======================================================================================================================
+
+5.scoped singleton
+
+The scoped method binds a class or interface into the container that should only be resolved one time within
+a given Laravel request / job lifecycle. 
+
+======================================================================================================================
+
+6.scopedIf 
+
+You may use the scopedIf method to register a scoped container binding only if a binding has not already
+been registered for the given type:
+
+=======================================================================================================================
+
+7.PSR-11
+
+Laravel's service container implements the PSR-11 interface. Therefore, you may type-hint the PSR-11 container
+interface to obtain an instance of the Laravel container:
+
+========================================================================================================================
+
+8. Post method
+
+Post method using data stored in the database .Like after user enter the details action is post.
+
+========================================================================================================================
+
+9.Get Method 
+
+It is used to get the data form database and if is required show the data in view page.
+
+=======================================================================================================================
+
+10.What is middleware 
+
+In Laravel middleware is used  Filter the HTTP request before entraing the application .Like if user send the request if user is authdicated means 
+ 
+ allow the dashbaord page else redirect the login page.
+
+=======================================================================================================================
+
+
+
+
