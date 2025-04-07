@@ -73,6 +73,26 @@ In Laravel middleware is used  Filter the HTTP request before entraing the appli
 
 =======================================================================================================================
 
+11.What is Eloquent ORM ?
+
+The Eloquent ORM is (Object Relational Mapping) easly we connect the database and get the data 
+and post,update ,delete like CRED .
+
+=========================================================================================================================
+12.PHP Artisan command ?
+
+The Php Artisan is Command-line interface tool and it comes with laravel.it helpes to run the command line and manages the 
+laravel appplication.
+
+========================================================================================================================
+
+13.Laravel Relationships ?
+
+Types :  One to One 
+         one to Many 
+         Many to One
+         Many to Many
+         Has many thorugh => A country has many post thorugh user 
 
 
 
