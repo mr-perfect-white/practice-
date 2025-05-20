@@ -94,5 +94,19 @@ Types :  One to One
          Many to Many
          Has many thorugh => A country has many post thorugh user 
 
+14.What is laravel session ?
+
+Laravel session is a way to stored the user data across  mutiple requests. it's like temporary Memory for the user lives on 
+ the server while user browsing in your app.
+  
+
+15. What is obsever in laravel and how they are used ?
+
+In Laravel Observers are class that listen that model events, Like model created , updated, deleted like that..
+They allow you to separate event-handling logic from the model itself, keeping your code clean and organized.
+
+How to create :  Php artisan make:observer UserObserver --model=User   
+
+16.
 
 
