@@ -102,11 +102,44 @@ Laravel session is a way to stored the user data across  mutiple requests. it's 
 
 15. What is obsever in laravel and how they are used ?
 
-In Laravel Observers are class that listen that model events, Like model created , updated, deleted like that..
-They allow you to separate event-handling logic from the model itself, keeping your code clean and organized.
+Observer is class that listen the model event, like created or updated  or deleted like that. That observer is register eventservice provider.
 
 How to create :  Php artisan make:observer UserObserver --model=User   
 
-16.
+
+16. what is accesser and mutator in laravel ?
+
+In Laravel accesser and mutator are special methods allow to you how customize the model attribute and stored also retrived.
+
+Accesser when you retrive the transform  model attribute like Capital letter;  (Get attribute)
+Mutator mean model attribute set like Password storing in Encriped. (Set attribute).
+
+
+17. what is event listener ?
+
+Event listener is way to handle the action .When the event is occur the application listener
+ is respond the event. like new user register the account listener is sent the welcome mail.
+
+18.When observer use & when Event listener use ?
+
+Observer : When your application model related work cycle you can use observer . like you have blog  you want create post so that time use can use observer.
+
+Event Listener : if user register the account it automatically sent the welcome mail and register account conformation like that...
+
+
+17. Explain the purpose boot method in model ?
+
+
+used to model event hooks.(Like  createing , updating, deleting..)
+
+
+18. Explain the purpose boot method in provider ?
+
+it is used to register the observer and event listener or extend the other functionalitity of after all the service register.
+
+
+19. What is laravel Collection ?
+
+
 
 
