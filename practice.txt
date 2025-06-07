@@ -141,5 +141,241 @@ it is used to register the observer and event listener or extend the other funct
 19. What is laravel Collection ?
 
 
+======================================================================
+20.what is traits ?
+
+php supports single inheritance child class have only one parent class . overcome this 
+
+traits is used to (trait) key words  . it is used create n number function and that you can use class of (use keyword)
+
+note : In class we can use N number of traits with help of use keyword..
+
+trait SuperName {
+
+    public function MasterClass1(){
+        return 'true';
+    }
+
+    public function MasterClass2(){
+        return 'false';
+    }
+}
+
+class parentclass{
+
+    use SuperName;
+}
+
+$obj = new parentclass();
+
+$obj->Masterclass1();  // output  => true
+$obj->Masterclass2();   // output  => false
+
+reference : https://www.youtube.com/watch?v=iQGyOT0I0GI
 
 
+=====================================================
+21.what is interface ?
+
+Interface super1{
+
+    public function Showpage1();
+}
+
+
+Interface super2 extend super1{
+
+    public function Showpage2();
+}
+
+
+class parent implements super2(){
+
+      public function Showpage1(){
+        echo "test 1 ";
+      }
+      public function Showpage2(){
+        echo "test 2 ";
+      }
+}
+
+Note:   In Interface what ever function you decleare those all the function 
+need to call in class. like if connect with class means.
+
+Interface to interface you can connect = extends (keyword)
+
+Interface to class you can connect = implements (keyword)
+
+Inside interface only public we can use . protected is not useable.
+
+===============================================================================
+
+
+22. what is Abstract ?
+
+abstract class supermaster{
+
+    abstract function master();
+    abstract function master1();
+    abstract function master2();
+}
+
+class adminmaster extends supermaster(){
+
+    function master(){
+        echo "test";
+    }
+     function master1(){
+        echo "test1";
+    }
+     function master2(){
+        echo "test2";
+    }
+    
+}
+
+$job = new adminmaster();
+
+$job = master();
+$job = master1();
+$job = master2();
+
+abstract key word must use inslide the class .
+
+Abstract class run the child class only . we can not run the parent class.
+
+abstract method can not contain body.
+
+abstract class does not support mutiple inheritance.
+
+
+abstract class SuperMaster {
+    abstract public function work();
+}
+
+abstract class AdminMaster extends SuperMaster {
+    public function commonTask() {
+        echo "Doing common task";
+    }
+}
+
+abstract class mainmaster extends AdminMaster{
+
+    public function task(){
+        echo "welcome the page";
+    }
+}
+
+
+https://www.youtube.com/watch?v=LEHAYq6Gic4
+=====================================================================
+
+1. What is Inheritance? 
+
+The parent class method inherit in child class like 
+
+class master{
+    public good(){
+        echo " good master ";
+    }
+}
+
+class admin extends master{
+
+    public function bad(){
+        echo " bad master";
+    }
+}
+
+$out = new admin();
+
+$out  = good(); /* output ----------- god master */
+$out  = bad();  /* output ----------- god master */
+
+
+========================================================================
+What is Final keyword ?
+
+The Final keyword class is can not be extend and that class function can't not be overridding .
+
+if you use final class, that class inside all the function is final .
+
+final class  A {
+
+    public function test(){
+
+        echo "test";
+    }
+}
+=========================================================================
+https://www.youtube.com/watch?v=PsypBup5qWc
+
+Difference Between Function Overloading and Overriding in OOPS  ?
+
+Overloading means same function name and different number of arg is called Overloading.
+
+code  :
+
+class A {
+
+    public funtion test($a){
+         $result = $a+10;
+         echo " Result ".$result.";
+    }
+}
+
+class B extend A {
+   public funtion test($a $b){
+         $result = $a+10;
+         echo " Result ".$result.";
+    }
+}
+
+$out = new A();
+
+ echo " Result " . $a->(5). ";
+
+$out = new B();
+
+ echo " Result " . $a->(5 6). ";
+
+But After Php 5 It code not working they are changed.
+
+
+Magical code (automatic callying function).
+
+
+function _call($name , $arg){
+    if($name  == "add"){
+        switch (count ($arg)){
+            case 0: return 0;
+            case 1:return &arg[0];
+            case 2:return $arg[0]+$arg[1];
+        }
+    }
+}
+
+output 
+
+
+$out = new A();
+
+ echo " Result " . $a->add(5). ";
+ 
+$out = new A();
+
+ echo " Result " . $b->add(5, 9). ";
+
+ ---------------------------------------------
+
+ overridding 
+
+ funtion overridding is same as other oop's programming lanquage .in function overridding is have same 
+ function name with in number of arguments .
+ =========================================================
+
+ What is Encapsulation  ?
+
+ The Encapsulation is an  attribute of a object. it contains all the data which is hidden . That hidden data can be 
+
+ restricted to the member of the class.
