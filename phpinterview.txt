@@ -1,0 +1,514 @@
+Topic :  Array 
+
+Array_fill() ; 
+
+it is create a array and fill the specifed value;
+
+ v
+
+array_push()
+
+It is push the new elements of last;
+
+ $data =  array("master", "perfect", "super");
+   
+   array_push($data, "dhilip", "kumar");
+   
+   print_r($data);
+
+output : 
+
+Array
+(
+    [0] => master
+    [1] => perfect
+    [2] => super
+    [3] => dhilip
+    [4] => kumar
+)
+
+
+array_pop()
+
+it is remove the last elemenst of array.
+
+ $data =  array("master", "perfect", "super","dhilip","kumar");
+
+ array_pop($data);
+
+ print_r($data);
+
+ output : 
+
+ Array
+(
+    [0] => master
+    [1] => perfect
+    [2] => super
+    [3] => dhilip
+)
+
+array_unshift()
+
+it adds one or more elements to the beginning of an array.
+
+$data1 =  array("master", "perfect", "super");
+    
+    array_unshift($data1,"dhilip", "kumar");
+    
+    print_r($data1);
+
+output : 
+
+Array
+(
+    [0] => dhilip
+    [1] => kumar
+    [2] => master
+    [3] => perfect
+    [4] => super
+)
+
+array_shift()
+
+it is removes the first element from an array .
+
+$data1 =  array("master", "perfect", "super");
+
+ array_shift($data1);
+
+ print_r($data1);
+
+output:
+
+Array
+(
+    [0] => kumar
+    [1] => master
+    [2] => perfect
+    [3] => super
+)
+
+array_merge()
+
+it is merge the two array in and return the signle array value;
+
+$filled = array_fill(0,5,"php");
+   
+$data =  array("master", "perfect", "super");
+  
+$value =  array_merge($filled, $data);
+  
+print_r($value);
+
+Output : 
+
+Array
+(
+    [0] => php
+    [1] => php
+    [2] => php
+    [3] => php
+    [4] => php
+    [5] => master
+    [6] => perfect
+    [7] => super
+)
+
+array_replace()
+
+in we have two array that second array values replace the first array values 
+
+$a = array(1,2,3,4);
+
+$b = array(5,6);
+
+$c = array_replace($a,$b);
+
+print_r($c);
+
+output :
+
+Array
+(
+    [0] => 5
+    [1] => 6
+    [2] => 3
+    [3] => 4
+)
+
+array_splice() 
+
+it is remove the elements and add other values there that indexs.
+
+ $a = array(1,2,3,4,5,6,7);
+
+  array_splice($a,3,4, ["four", "five","six","seven"]);
+
+ print_r($a);
+
+output : 
+
+Array
+(
+    [0] => 1
+    [1] => 2
+    [2] => 3
+    [3] => four
+    [4] => five
+    [5] => six
+    [6] => seven
+)
+
+array_slice()
+
+it is get particular elements and display the new array;
+
+$a = array(1,2,3,4,5,6,7);
+
+$b = array_slice($a,4,3);
+
+print_r($b);
+
+output :
+
+Array
+(
+    [0] => 5
+    [1] => 6
+    [2] => 7
+)
+
+in_array();
+
+$fruits = ["apple", "banana", "orange"];
+
+if (in_array("banana", $fruits)) {
+    echo "Banana is in the array.";
+} else {
+    echo "Banana is not in the array.";
+}
+
+
+array_key_exists();
+
+$person = ["name" => "John", "age" => 30];
+
+if (array_key_exists("age", $person)) {
+    echo "Key 'age' exists in the array.";
+} else {
+    echo "Key 'age' does not exist.";
+}
+
+array_search();
+
+$colors = ["red", "green", "blue"];
+
+$key = array_search("green", $colors);
+
+echo "Key is: $key";  // Output: Key is: 1
+
+array sorting => 
+
+sort();
+
+$a = array(1,2,3,4,5,6,7);
+
+ sort($a);
+
+ print_r($a);
+
+ output :
+
+ Array
+(
+    [0] => 1
+    [1] => 2
+    [2] => 3
+    [3] => 4
+    [4] => 5
+    [5] => 6
+    [6] => 7
+)
+
+
+rsort() => reverse the array 
+
+$a = array(1,2,3,4,5,6,7);
+
+ rsort($a);
+
+ print_r($a);
+
+output :
+
+Array
+(
+    [0] => 7
+    [1] => 6
+    [2] => 5
+    [3] => 4
+    [4] => 3
+    [5] => 2
+    [6] => 1
+)
+
+filter and mapping 
+
+array_filter() 
+
+filter the array elements of even numer or odd number;
+
+$a = array(1,2,3,4,5,6,7);
+
+array_filter($a , function($n){
+   if($n % 2 == 0 ){
+       echo $n."\n";
+   }
+})
+
+output :  
+
+2
+4
+6
+
+array_map() requires at least two arguments:
+
+$n= [1, 2, 3, 4];
+$b= [1, 2, 3, 4];
+$squared = array_map(function($n, $b) {
+    return $b * $n;
+},$n ,$b);   => this is very important line;
+
+print_r($squared);
+
+array_walk()
+
+lets you apply a custom function to each element of an array.
+
+
+ $a = ["master", "Super"];
+ 
+ array_walk($a , function($value, $key){
+     
+     $value = lcfirst($value);
+     
+     print_r($value);
+     
+ })
+
+
+array_combine => combine two array into single array.
+
+$a = ["master", "Super"];
+ $b = ["perfect", "good"];
+ 
+ $c = array_combine($a,$b);
+ 
+ print_r($c);
+ 
+
+ array_chunk()
+
+ function splits an array into smaller chunks (sub-arrays) of a specified size.
+$a = [1,2,3,4,5,6,7,8,10];
+
+ $b = array_chunk($a , 5);
+
+print_r($b);
+
+
+output :
+
+Array
+(
+    [0] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 3
+            [3] => 4
+            [4] => 5
+        )
+
+    [1] => Array
+        (
+            [0] => 6
+            [1] => 7
+            [2] => 8
+            [3] => 10
+        )
+
+)
+
+array_keys()	Returns all keys
+array_values()	Returns all values 
+
+array_cloums()
+
+$people = [
+    ["id" => 1, "name" => "Alice"],
+    ["id" => 2, "name" => "Bob"],
+    ["id" => 3, "name" => "Charlie"],
+];
+
+$namesById = array_column($people, 'name', 'id');
+
+print_r($namesById);
+
+
+array_unique()	Removes duplicate values 
+
+$a = array(1,2,3,4,5,4,4,3,2,1,1,1);
+
+ $value  =  array_unique($a);
+
+ print_r($value);
+
+ output 
+ 1,2,3,4,5,
+
+array_diff()
+
+The array_diff() function compares two or more arrays and returns a new array 
+containing values from the first array that are not present in any of the others.
+
+$a = array(1,2,3,4,5,4,4,3,2,1,1,1);
+
+$b = array(2,4,5);
+
+$c = array(1,0);
+
+$value  = array_diff($a , $b, $c);
+
+print_r($value);
+
+output :  
+Array
+(
+    [2] => 3
+    [7] => 3
+)
+ 
+array_intersect()
+
+The array_intersect() function returns an array containing all values that are present in all the given arrays.
+
+$a = [1, 2, 3, 4];
+$b = [2, 4, 6];
+
+$result = array_intersect($a, $b);
+
+print_r($result);
+
+output :
+
+2,4
+
+array_merge_recursive();
+
+
+$array1 = ["color" => "red", "fruit" => "apple", "color1" => "green"];
+$array2 = ["color" => "blue", "drink" => "water" , "color1" => "white"];
+
+$result = array_merge_recursive($array1, $array2);
+
+print_r($result);
+
+array_reverse()
+
+reverse the array value;
+
+$a = array(10,202,20,4,5);
+
+$b = array_reverse($a);
+
+print_r($b);
+
+array_rand()	Picks random key(s)
+
+
+$fruits = ["apple", "banana", "cherry", "date"];
+
+$randomKey = array_rand($fruits);
+
+echo "Random key: $randomKey\n";
+echo "Random value: " . $fruits[$randomKey];
+
+array_sum()
+
+add the all array values
+
+$a = array(10,202,20,4,5);
+
+$b = array_sum($a);
+
+print_r($b);
+
+
+array_product()
+
+all the array values into multiplication
+
+$numbers = [2, 3, 4];
+
+$product = array_product($numbers);
+
+echo $product; 
+
+array_compact()
+
+$name = "Alice";
+$age = 30;
+
+$result = compact("name", "age");
+
+print_r($result);
+
+array_extract()
+
+$array = ["name" => "Alice", "age" => 30];
+
+extract($array);
+
+echo $name; // Alice
+echo $age;  // 30
+
+range()
+
+$numbers = range(1, 10, 2);
+
+print_r($numbers);
+
+(note : this rang is bvery user friendly )
+
+
+array_key_first()
+
+This is array_key_first return the first key of array;
+
+$fruits = ["apple" => "red", "banana" => "yellow", "cherry" => "red"];
+
+$firstKey = array_key_first($fruits);
+
+echo $firstKey; // apple
+
+
+array_key_first()
+
+Returns: The last key in the array. If the array is empty, returns null.
+
+$fruits = ["apple" => "red", "banana" => "yellow", "cherry" => "red"];
+
+$lastKey = array_key_last($fruits);
+
+echo $lastKey; // cherry
+
+is_countable()
+
+$fruits = ["apple", "banana", "cherry"];
+
+echo is_countable($fruits) ? 'True' : 'False'; // True
+
+===================================  Array is completed   ============================================================
