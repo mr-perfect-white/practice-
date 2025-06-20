@@ -1,0 +1,12 @@
+spatia laravel 
+
+=> Spatia laravel media library
+=> Carbon packages 
+=> Pest  packages 
+=> Orchestral Testbench  
+
+Spatie Laravel Permission is a popular package used to manage user roles and permissions 
+in Laravel applications. It helps you easily implement role-based access control (RBAC).
+
+Check permissions with methods like hasRole(), can(), hasPermissionTo() ;
+

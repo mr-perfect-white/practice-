@@ -512,3 +512,8 @@ $fruits = ["apple", "banana", "cherry"];
 echo is_countable($fruits) ? 'True' : 'False'; // True
 
 ===================================  Array is completed   ============================================================
+https://www.youtube.com/watch?v=wKp1GD50NIg => namespaces concept
+
+
+PHP namespaces are a way to group related classes, functions, and constants together, and 
+avoid name conflicts.
