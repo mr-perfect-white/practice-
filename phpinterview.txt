@@ -898,6 +898,42 @@ prevent method overridding.
 Oce you add the final keyword in your class , inside class whatever function is there those all the function also final functions.
 
 ----------------------------------------------------------------------------------
+Polymorphism   :
+
+The Same function name and different operations is called Polymorphism. (Example paint photo.)
+
+class Animal {
+    public function makeSound() {
+        echo "Some sound";
+    }
+}
+
+class Dog extends Animal {
+    public function makeSound() {
+        echo "Bark";
+    }
+}
+
+class Cat extends Animal {
+    public function makeSound() {
+        echo "Meow";
+    }
+}
+
+function playSound(Animal $animal) {
+    $animal->makeSound();
+}
+
+$dog = new Dog();
+$cat = new Cat();
+
+playSound($dog);  // Output: Bark
+playSound($cat);  // Output: Meow
+
+Polymorphism has two Type :
+ 
+1.overloading  => compllie -time => Static Binding => Early Binding
+2.overridding  => runtime        => Dynamic Binding => Late Binding
 
 overloading :
 
